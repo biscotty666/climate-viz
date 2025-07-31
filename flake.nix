@@ -54,6 +54,7 @@
               remotes
               rgl
               sf
+              styler
               tidyr
               tidyverse
               vcd

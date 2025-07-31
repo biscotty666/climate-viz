@@ -63,7 +63,7 @@ t_data %>%
   geom_text(data = annotation, 
             aes(x = month_number, y = t_diff,
                 label = year, color = year),
-            hjust = 0, size = 5, nudge_x = 0.15, font = "bold",
+            hjust = 0, size = 5, nudge_x = 0.15, fontface = "bold",
             inherit.aes = FALSE) +
   scale_x_continuous(breaks = 1:12,
                      labels = month.abb,
@@ -84,7 +84,7 @@ t_data %>%
     plot.background = element_rect(fill = "#333333"),
     panel.background = element_rect(fill = "black",
                                     color = "white",
-                                    size = 1),
+                                    linewidth = 1),
     panel.grid = element_blank(),
     axis.text = element_text(color = "white", size = 14),
     axis.ticks = element_line(color = "white"),
