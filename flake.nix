@@ -27,9 +27,6 @@
             rstudio
             quarto
             (with rPackages; [
-              concaveman
-              corrplot
-              gcookbook
               geomtextpath
               ggblend
               ggcorrplot
@@ -42,22 +39,14 @@
               ggiraph
               ggridges
               gt
-              hexbin
-              igraph
-              mapproj
-              maps
-              MASS
               pagedown
-              palmerpenguins
-              patchwork
               quarto
               remotes
               rgl
-              sf
+              shiny
               styler
               tidyr
               tidyverse
-              vcd
               webshot2
             ])
          ];
