@@ -1,29 +1,22 @@
----
-title: "Styling Line Plot Climate Index"
-format: 
-  gfm:
-    toc: true
----
+# Styling Line Plot Climate Index
 
-```{r, setup, include=FALSE}
-knitr::opts_chunk$set(paged.print = FALSE)
-options(digits = 4)
-```
-
-```{r}
-#| message: false
+``` r
 library(tidyverse)
 ```
 
-```{r}
+``` r
 temps <- read_csv("data/GLB.Ts+dSST.csv", skip = 1, na = "***")
 ```
 
-```{r}
-#| warning: false
-#| message: false
-#| fig-width: 9
-#| fig-height: 6
+    Rows: 146 Columns: 19
+    ── Column specification ────────────────────────────────────────────────────────
+    Delimiter: ","
+    dbl (19): Year, Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec, ...
+
+    ℹ Use `spec()` to retrieve the full column specification for this data.
+    ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+
+``` r
 temps %>% 
   select(year = Year, t_diff = 'J-D') %>% 
   ggplot(aes(x = year, y = t_diff)) +
@@ -56,7 +49,19 @@ temps %>%
   )
 ```
 
-```{r}
+![](ClimateIndexLineStyle_files/figure-commonmark/unnamed-chunk-3-1.png)
+
+``` r
 ggsave("figures/temp_index_plot.png", width = 9, height = 6)
 ```
 
+    `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
+
+    Warning: Removed 1 row containing non-finite outside the scale range
+    (`stat_smooth()`).
+
+    Warning: Removed 1 row containing missing values or values outside the scale range
+    (`geom_line()`).
+
+    Warning: Removed 1 row containing missing values or values outside the scale range
+    (`geom_point()`).
