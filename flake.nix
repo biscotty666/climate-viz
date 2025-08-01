@@ -28,6 +28,7 @@
             quarto
             (with rPackages; [
               geomtextpath
+              gganimate
               ggblend
               ggcorrplot
               ggdensity
